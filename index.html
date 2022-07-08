@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="shortcut icon" href="./ico.png" type="image/png" />
+  <title>Youtube</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400&display=swap');
+
+    * {
+      font-family: "Rubik", sans-serif;
+    }
+
+    .Loader_wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      z-index: 1000;
+    }
+
+    .bar {
+      height: 100%;
+      background: red;
+      transition: width 1s ease;
+      width: 0%;
+      border-radius: 4px;
+      box-shadow: 0px 0px 12px 2px red;
+    }
+
+    .text-my {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 0.7rem;
+    }
+
+    .text-dmy {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    body {
+      background: whitesmoke;
+    }
+  </style>
+</head>
+
+<body class="dark:bg-zinc-900">
+  <div class="Loader_wrapper"></div>
+  <div class="w-full z-50 h-auto py-6 sticky bg-white dark:bg-zinc-900 top-0 left-0 shadow-lg">
+    <div class="container px-4 mx-auto sm:px-0">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <img class="w-6 h-6" src="./Logo.svg" alt="logo" />
+          <a class="ml-2 font-bold dark:text-white text-xl" href="/">Youtube API</a>
+        </div>
+        <div class="iconOf flex items-center justify-center cursor-pointer">
+          <span class="material-symbols-outlined dark:text-white">
+            search
+          </span>
+        </div>
+      </div>
+      <div class="hidden barOf flex items-center mt-6 space-x-2">
+        <input placeholder="Enter And Press Enter" type="text" class=" w-full py-2 px-4 outline-none border-2 border-darkColor border-lightColor rounded-md" />
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-4 sm:px-0">
+
+    <!--<div class="_loaderVideo w-full h-auto">
+        <iframe class="w-full fixed h-60 top-16 left-0 right-0" src="https://www.youtube.com/embed/${data.id}?controls=1&rel=0&showinfo=0&modestbranding=1&autohide=1" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        <div class="flex items-start mt-64">
+          <img src="./Logo.svg" class="rounded-full mt-2 w-8 h-8 shirnk-0 bg-gray-600"/>
+          <div class="ml-2">
+            <p class="capitalize font-semibold text-xl">Meet sourav Joshi</p>
+            <p class="text-sm">sandeep Maheswari</p>
+          </div>
+        </div>-->
+
+
+    <div class="_wrapper overflow-hidden my-6 flex justify-center gap-5 flex-wrap">
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="_loaderCard sm:w-72 w-full max-w-sm mb-2 cursor-pointer">
+        <div class="w-full h-48 rounded-lg bg-gray-600 "></div>
+        <div class="flex items-start mt-2">
+          <div class="w-8 h-8 bg-gray-600 mt-2 rounded-full shrink-0"></div>
+          <div class="w-full ml-3">
+            <div class="bg-gray-600 rounded-md w-full p-3 capitalize font-semibold text-xl"></div>
+            <div class="mt-1 w-full rounded-md flex items-center p-3 bg-gray-600"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div
+
+
+
+  <script src="./main.js"></script>
+  <script src='./main2.js'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lightColor: 'rgba(0,0,0,0.6)',
+            darkColor: 'rgba(255,255,255,0.6)'
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
