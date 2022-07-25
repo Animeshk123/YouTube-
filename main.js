@@ -120,7 +120,7 @@ function play(e,f) {
         document.documentElement.scrollTop = 0; // 
   if (!show) {
     let playerHtml = `<div class="_loaderVideo w-full h-auto">
-        <iframe class="video w-full fixed bg-gray-600 max-w-lg mx-auto h-60 top-16 left-0 right-0" src="https://www.youtube.com/embed/${f.id}?controls=1&rel=0&showinfo=0&modestbranding=1&autohide=1" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        <iframe class="video w-full fixed bg-gray-600 max-w-lg mx-auto h-60 top-16 left-0 right-0" src="https://www.youtube.com/embed/${f.id}?controls=1&rel=0&showinfo=0&modestbranding=1&autohide=1" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen autoplay="true"></iframe>
         <div class="flex items-start mt-56 max-w-lg mx-auto">
           <img src=${e} class="rounded-full mt-2 w-8 h-8 shirnk-0 bg-gray-600"/>
           <div class="ml-2">
