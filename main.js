@@ -1,6 +1,5 @@
 const _APIKEY = `AIzaSyAAqcsF0GCq1wJjH4X37YbYaYpm-7ZyQjQ`;
 let show = false;
-alert('hello');
 const _qs = (type) => {
   if (document.querySelectorAll(type).length > 1) {
     return document.querySelectorAll(type);
